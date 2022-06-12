@@ -5,10 +5,10 @@ package com.mycompany.heranca.medico;
 public class Interno extends Medico {
     private String turno;
     private String faculdade;
-    private String responsavel;
+    private Diretor responsavel;
     private boolean relatorioEntregue;
 
-    public Interno(String turno, String faculdade, String responsavel, 
+    public Interno(String turno, String faculdade, Diretor responsavel,
             boolean relatorioEntregue, 
             String crm, String especialidade) {
         super(crm, especialidade);
@@ -47,10 +47,10 @@ public class Interno extends Medico {
     }
 
     public String getResponsavel() {
-        return responsavel;
+        return responsavel.getNome();
     }
 
-    public void setResponsavel(String responsavel) {
+    public void setResponsavel(Diretor responsavel) {
         this.responsavel = responsavel;
     }
 

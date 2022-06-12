@@ -10,7 +10,6 @@ abstract class Atendente {
         this.cargaHoraria = cargaHoraria;
     }
     
-    
 
     public String getSetor() {
         return setor;
@@ -27,8 +26,5 @@ abstract class Atendente {
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
-    
-    
-    
    
 }

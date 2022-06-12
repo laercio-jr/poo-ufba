@@ -46,12 +46,16 @@ public class Heranca {
         Diretor medicoDiretor = new Diretor("Principal", "9999", "Clínico Geral");
         medicoDiretor.mudarTurnos();
 
+        Diretor medicoDiretor2 = new Diretor("sei la", "9922299", "Clínico");
+
         System.out.println("-- Residente --");
         Residente medicoResidente = new Residente(true, new String[]{"Terça", "Sexta"}, "João", "8855", "Pediatra" );
         medicoResidente.substituirMedico();
 
         System.out.println("-- Interno --");
-        Interno medicoInterno = new Interno("Manhã", "Medicina", "João", true, "4040", "Ginecologista");
+        Interno medicoInterno = new Interno("Manhã", "Medicina", medicoDiretor, true, "4040", "Ginecologista");
+        medicoInterno.setTurno("Tarde");
+        medicoInterno.setResponsavel(medicoDiretor2);
         medicoInterno.reportarResponsavel();
     }
 }
