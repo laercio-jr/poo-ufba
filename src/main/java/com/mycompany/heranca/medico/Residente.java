@@ -7,9 +7,9 @@ import java.util.Arrays;
 public class Residente extends Medico {
     private boolean substituicaoSemanal;
     private String[] diasPlantao;
-    private String supervisor;
+    private Diretor supervisor;
 
-    public Residente(boolean substituicaoSemanal, String[] diasPlantao, String supervisor, String crm, String especialidade) {
+    public Residente(boolean substituicaoSemanal, String[] diasPlantao, Diretor supervisor, String crm, String especialidade) {
         super(crm, especialidade);
         this.substituicaoSemanal = substituicaoSemanal;
         this.diasPlantao = diasPlantao;
@@ -47,10 +47,10 @@ public class Residente extends Medico {
     }
 
     public String getSupervisor() {
-        return supervisor;
+        return supervisor.getNome();
     }
 
-    public void setSupervisor(String supervisor) {
+    public void setSupervisor(Diretor supervisor) {
         this.supervisor = supervisor;
     }
     

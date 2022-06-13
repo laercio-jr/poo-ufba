@@ -6,30 +6,23 @@ package com.mycompany.heranca.atendente;
 import com.mycompany.heranca.interfaces.ILider;
 
 public class Gerente extends Atendente implements ILider {
-    private String responsavel;
     private String senioridade;
     private String turno;
     
     
-     public Gerente(String responsavel, String senioridade, String turno, String setor, int cargaHoraria) {
-        super(setor, cargaHoraria);
-         
-         
-        this.responsavel = responsavel;
+     public Gerente(String nome, String senioridade, String turno, String setor, int cargaHoraria) {
+        super(nome, setor, cargaHoraria);
+
         this.senioridade = senioridade;
         this.turno = turno;
     }
      
     public void status() {
-        System.out.println("Esse gerente tem o responsavel  " + this.getResponsavel() + 
-                "esta no setor " + this.getSetor() + "e sua carga horaria eh " + this.getCargaHoraria());
+        System.out.println("Esse gerente ("+ this.getNome() + ") está no setor " + this.getSetor() + " e sua carga horária eh " + this.getCargaHoraria());
         System.out.println("Tem a senioridade: " + this.getSenioridade());
-        System.out.println("e trabalha no turno:    " + this.getTurno());
+        System.out.println("Trabalha no turno: " + this.getTurno());
     }
 
-    public String getResponsavel() {
-        return responsavel;
-    }
 
     public String getSenioridade() {
         return senioridade;
@@ -60,8 +53,6 @@ public class Gerente extends Atendente implements ILider {
     @Override
     public void solicitarDesligamento() {
         System.out.println("Você não é um supervisor para solicitar desligamento");
-        
-
     }
 
     @Override
