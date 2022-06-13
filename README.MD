@@ -1,4 +1,4 @@
-# Programação Orientada à objetos (2022.1)
+# Programação Orientada à objetos (UFBA 2022.1)
 
 ### Herança
 #### Dupla: [Laércio](https://github.com/laercio-jr) e [Laisa](https://github.com/laisapereira)
